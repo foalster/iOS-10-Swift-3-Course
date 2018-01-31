@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-PA-BiG">
+                                <rect key="frame" x="40.333333333333343" y="144" width="294" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H03-ag-JXP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="294" id="PuY-1X-4bJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AsianAss" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-Ze-glb" customClass="RoundedImageView" customModule="MVC_Test" customModuleProvider="target">
+                                <rect key="frame" x="40" y="202" width="294" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="YRY-22-fff"/>
+                                    <constraint firstAttribute="height" constant="490" id="noy-1Q-W5W"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5g-Gr-zbQ">
+                                <rect key="frame" x="40" y="700" width="294" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C22-he-02i" userLabel="height = 50"/>
+                                    <constraint firstAttribute="width" constant="294" id="xGD-cH-E5Q"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b23-kM-QVq">
+                                <rect key="frame" x="159" y="748" width="56" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0i2-c0-OnO"/>
+                                    <constraint firstAttribute="width" constant="56" id="kpN-Wi-Uf4"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9w-48-Sth"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Sx-PA-BiG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6ZM-Kj-2ln"/>
+                            <constraint firstItem="DgR-Ze-glb" firstAttribute="top" secondItem="7Sx-PA-BiG" secondAttribute="bottom" constant="8" id="CvJ-wf-oC0"/>
+                            <constraint firstItem="7Sx-PA-BiG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4u-sx-unI"/>
+                            <constraint firstItem="V5g-Gr-zbQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7G-Pc-Dmr"/>
+                            <constraint firstItem="DgR-Ze-glb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5u-co-Z1O"/>
+                            <constraint firstItem="b23-kM-QVq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keZ-vF-b9p"/>
+                            <constraint firstItem="b23-kM-QVq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rwP-D3-avR"/>
+                            <constraint firstItem="V5g-Gr-zbQ" firstAttribute="top" secondItem="DgR-Ze-glb" secondAttribute="bottom" constant="8" id="tYX-vE-ggP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fullName" destination="7Sx-PA-BiG" id="cgh-dh-aSa"/>
+                        <outlet property="renameField" destination="V5g-Gr-zbQ" id="3Bz-9k-1rB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="159.60591133004928"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AsianAss" width="750" height="1257"/>
+    </resources>
+</document>
